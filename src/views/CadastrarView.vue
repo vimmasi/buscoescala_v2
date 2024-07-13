@@ -28,22 +28,29 @@ const adicionarDataServico = () => {
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center text-xl mx-4">
+  <div class="cadastrar">
     <h2 class="text-center uppercase">Cadastrar nova data</h2>
+
     <TheCard class="w-full">
-      <form @submit.prevent="adicionarDataServico" class="grid gap-8 grid-cols-1 sm:grid-cols-3">
+      <form @submit.prevent="adicionarDataServico" class="cadastrar-formulario">
+
         <div class="flex items-center justify-between">
           <label for="nomeMilitar">Militar:</label>
-          <select id="nomeMilitar" v-model="nomeMilitarSelecionado" required class="input text-center text-shark-300 mt-2 ml-4">
+          <select id="nomeMilitar" v-model="nomeMilitarSelecionado" required
+            class="input text-center text-shark-300 mt-2 ml-4">
             <option v-for="militar in militares" :key="militar.id" :value="militar.nome">{{ militar.nome }}</option>
           </select>
         </div>
+
         <div class="flex items-center justify-between">
           <label for="data">Data de Serviço:</label>
-          <input type="date" id="data" v-model="novaDataServico" required class="input text-center text-shark-300 mt-2 ml-4" />
+          <input type="date" id="data" v-model="novaDataServico" required
+            class="input text-center text-shark-300 mt-2 ml-4" />
         </div>
+
         <button type="submit" class="botao">Adicionar</button>
       </form>
     </TheCard>
+
   </div>
 </template>

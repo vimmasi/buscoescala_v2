@@ -8,7 +8,19 @@
   }
 
   .buscar {
-    @apply text-xl mx-4;
+    @apply text-xl mx-4 sm:grid sm:grid-cols-2 gap-4;
+  }
+
+  .pesquisa {
+    @apply inline-flex items-center w-6 h-6 col-span-2 my-6;
+  }
+
+  .cadastrar {
+    @apply flex flex-col items-center justify-center text-xl mx-4
+  }
+
+  .cadastrar-formulario {
+    @apply grid gap-8 grid-cols-1 sm:grid-cols-3
   }
 
   .observacoes {
@@ -20,11 +32,27 @@
   }
 
   .modal {
-    @apply flex flex-col w-1/2 bg-shark-800 rounded-lg;
+    @apply flex flex-col sm:w-1/2 bg-shark-800 rounded-lg;
+  }
+
+  .modal-textarea {
+    @apply m-4 bg-shark-950 text-shark-50 rounded-lg p-4 border-2 border-shark-950  hover:border-forest-green-700 focus:border-forest-green-500 focus:outline-none transition-colors
+  }
+
+  .nota {
+    @apply flex flex-col justify-between min-h-32
+  }
+
+  .nota-info {
+    @apply flex justify-between px-4 rounded-bl-lg rounded-br-lg bg-shark-900
   }
 
   .navbar {
     @apply flex justify-between items-center  px-8 bg-shark-800 m-4 rounded-lg font-bold;
+  }
+
+  .navbar-logo {
+    @apply hidden sm:block w-24;
   }
 
   .navbar-links {
@@ -51,8 +79,16 @@
     @apply w-52 rounded-lg px-2 py-1 bg-shark-950 text-shark-50  focus:outline-none border-2 border-transparent hover:border-forest-green-700 focus:border-forest-green-500 transition-colors duration-75;
   }
 
+  .card {
+    @apply bg-shark-800 my-2 p-4 rounded-lg w-full shadow-lg;
+  }
+
   .botao {
     @apply py-2 px-4 text-center font-semibold text-shark-50 bg-forest-green-500 rounded-xl hover:rounded-md hover:bg-forest-green-700 border border-forest-green-500 hover:border-forest-green-700 transition-all duration-75;
+  }
+
+  .botao-adicionar {
+    @apply flex items-center justify-center py-2 px-4 mt-4 pb-4  w-14 h-14 text-5xl  font-semibold text-shark-50 bg-forest-green-500 rounded-xl hover:rounded-md hover:bg-forest-green-700 border border-forest-green-500 hover:border-forest-green-700 transition-all duration-75
   }
 
   .botao-outline {

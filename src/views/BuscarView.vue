@@ -52,9 +52,9 @@ const ordenarPatentes = computed(() => {
 </script>
 
 <template>
-  <main class="buscar sm:grid sm:grid-cols-2 gap-4">
+  <main class="buscar">
     <!-- Display da barra de pesquisa -->
-    <div class="inline-flex items-center w-6 h-6 col-span-2 my-6">
+    <div class="pesquisa">
       <img src="@/assets/lupa_icon.svg" />
       <input v-model.trim="search" type="text" placeholder="Pesquisar militar..." class="input p-2 ml-2" />
     </div>
@@ -65,14 +65,14 @@ const ordenarPatentes = computed(() => {
       <!-- SARGENTO -->
       <h2 class="uppercase">Sargento de dia</h2>
       <TheCard>
-        <div class="grid grid-cols-2 text-shark-50">
+        <div class="grid grid-cols-2 text-shark-50 pl-1">
           <h3>Militar</h3>
           <h3>Datas de serviço</h3>
         </div>
         <div v-if="possuiResultados('SGT')">
           <div v-for="database in databases" :key="database.id">
             <div v-if="database.patente === 'SGT'">
-              <span v-if="database.datas.length > 0" class="grid grid-cols-2">
+              <span v-if="database.datas.length > 0" class="grid grid-cols-2 bg-shark-900 pl-4 py-2 rounded-lg">
                 <p>{{ database.patente }} {{ database.nome }}</p>
                 <p v-html="formatarDatas(database.datas)"></p>
               </span>
@@ -87,14 +87,14 @@ const ordenarPatentes = computed(() => {
       <!-- CABO -->
       <h2 class="uppercase">Cabo de dia</h2>
       <TheCard>
-        <div class="grid grid-cols-2 text-shark-50">
+        <div class="grid grid-cols-2 text-shark-50 pl-1">
           <h3>Militar</h3>
           <h3>Datas de serviço</h3>
         </div>
         <div v-if="possuiResultados('CB')">
           <div v-for="database in databases" :key="database.id">
             <div v-if="database.patente === 'CB'">
-              <span v-if="database.datas.length > 0" class="grid grid-cols-2">
+              <span v-if="database.datas.length > 0" class="grid grid-cols-2 bg-shark-900 pl-4 py-2 rounded-lg">
                 <p>{{ database.patente }} {{ database.nome }}</p>
                 <p v-html="formatarDatas(database.datas)"></p>
               </span>
@@ -109,14 +109,14 @@ const ordenarPatentes = computed(() => {
       <!-- SOLDADOS -->
       <h2 class="uppercase">Soldados</h2>
       <TheCard>
-        <div class="grid grid-cols-2 text-shark-50">
+        <div class="grid grid-cols-2 text-shark-50 pl-1">
           <h3>Militar</h3>
           <h3>Datas de serviço</h3>
         </div>
         <div v-if="possuiResultados('S1') || possuiResultados('S2')">
           <div v-for="database in databases" :key="database.id">
-            <div v-if="database.patente === 'S1' || database.patente === 'S2'">
-              <span v-if="database.datas.length > 0" class="grid grid-cols-2">
+            <div v-if="database.patente === 'S1' || database.patente === 'S2'" class="mb-4">
+              <span v-if="database.datas.length > 0" class="grid grid-cols-2 bg-shark-900 pl-4 py-2 rounded-lg">
                 <p>{{ database.patente }} {{ database.nome }}</p>
                 <p v-html="formatarDatas(database.datas)"></p>
               </span>

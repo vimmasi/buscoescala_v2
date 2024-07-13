@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router'
 
 <template>
     <nav class="navbar">
-        <img src="@/assets/logoipsum-254.svg" alt="LOGO" class="hidden sm:block w-24" />
+        <img src="@/assets/logoipsum-254.svg" alt="LOGO" class="navbar-logo" />
         <div class="navbar-links">
             <RouterLink to="/" class="navbar-links-link">Buscar
             </RouterLink>
