@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container-custom {
+    @apply m-auto;
+  }
+
+  .buscar {
+    @apply text-xl mx-4;
+  }
+
+  .cadastrar {
+    /*  */
+  }
+
+  .observacoes {
+    @apply text-xl mx-4;
+  }
+
+  .overlay {
+    @apply absolute flex items-center justify-center w-full h-full rounded-xl bg-[#000000c4] z-10
+  }
+
+  .modal {
+    @apply flex flex-col w-1/2 bg-shark-800 rounded-lg
+  }
+
+  .navbar {
+    @apply flex justify-between items-center  px-8 bg-shark-800 m-4 rounded-lg font-bold;
+  }
+
+  .navbar-links {
+    @apply flex gap-4 w-full tela-pequena:gap-8 tela-pequena:justify-center md:justify-center mt-1;
+  }
+
+  .navbar-links-link {
+    @apply p-2 hover:text-shark-50;
+  }
+
+  .navbar-user {
+    @apply hidden sm:flex sm:items-center
+  }
+
+  .active {
+    @apply bg-transparent;
+  }
+
+  .exact-active {
+    @apply text-shark-50 bg-shark-950 rounded-tl-lg rounded-tr-lg;
+  }
+
+  .input {
+    @apply w-52 rounded-lg px-2 py-1 bg-shark-950 text-shark-50  focus:outline-none border-2 border-transparent hover:border-forest-green-700 focus:border-forest-green-500 transition-colors duration-75;
+  }
+
+  .botao {
+    @apply py-2 px-4 text-center font-semibold text-shark-50 bg-forest-green-500 rounded-xl hover:rounded-md hover:bg-forest-green-700 border border-forest-green-500 hover:border-forest-green-700 transition-all duration-75;
+  }
+
+  .botao-outline {
+    @apply py-2 px-4 text-center font-semibold text-forest-green-500 bg-transparent hover:bg-forest-green-700 hover:text-shark-50 border border-forest-green-500 hover:border-transparent rounded-xl hover:rounded-md transition-all duration-75;
+  }
+
+  .botao-outline-vermelho {
+    @apply py-2 px-4 text-center font-semibold text-mexican-red-500 bg-transparent hover:bg-mexican-red-700 hover:text-shark-50 border border-mexican-red-500 hover:border-transparent rounded-xl hover:rounded-md transition-all duration-75;
+  }
+}
