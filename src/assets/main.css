@@ -11,20 +11,16 @@
     @apply text-xl mx-4;
   }
 
-  .cadastrar {
-    /*  */
-  }
-
   .observacoes {
     @apply text-xl mx-4;
   }
 
   .overlay {
-    @apply absolute flex items-center justify-center w-full h-full rounded-xl bg-[#000000c4] z-10
+    @apply absolute flex items-center justify-center w-full h-full rounded-xl bg-[#000000c4] z-10;
   }
 
   .modal {
-    @apply flex flex-col w-1/2 bg-shark-800 rounded-lg
+    @apply flex flex-col w-1/2 bg-shark-800 rounded-lg;
   }
 
   .navbar {
@@ -40,7 +36,7 @@
   }
 
   .navbar-user {
-    @apply hidden sm:flex sm:items-center
+    @apply hidden sm:flex sm:items-center;
   }
 
   .active {

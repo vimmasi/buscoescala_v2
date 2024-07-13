@@ -45,10 +45,10 @@ Este é um projeto simples de controle de militares, desenvolvido com Vue.js, Vu
    - Após a instalação das dependências, inicie o servidor de desenvolvimento com o seguinte comando:
 
      ```
-     npm run serve
+     npm run dev
      ```
 
-   - O aplicativo estará disponível em `http://localhost:8080`.
+   - O aplicativo estará disponível em `http://localhost:5173`.
 
 3. **Estrutura do Projeto**
    - Os componentes estão organizados na pasta `src/components`.
